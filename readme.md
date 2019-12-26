@@ -16,44 +16,49 @@ The following operations can be made with the unmodified cesar.class program:
 
 ### encrypt
 
-Arg1: string to encrypt
-Arg2: offset to use
-Example: java cesar encrypt HELLO 5
-Expected result: MJQQT
+| Argument 1      | string to encrypt          |
+| --------------- | -------------------------- |
+| Argument 2      | offset to use              |
+| Example         | java cesar encrypt HELLO 5 |
+| Expected result | MJQQT                      |
 
 Will encrypt a given string with a given offset using the Ceasar's Cipher.
 
 ### decrypt
 
-Arg1: string to decrypt
-Arg2: offset to use
-Example: java cesar decrypt MJQQT 5
-Expected result: HELLO
+| Argument 1      | string to encrypt          |
+| --------------- | -------------------------- |
+| Argument 2      | offset to use              |
+| Example         |  java cesar decrypt MJQQT 5 |
+| Expected result | HELLO                      |
 
 Will decrypt a given string with a given offset using the Ceasar's Cipher.
 
 ### force
 
-Arg1: string to brute force
-Arg2: part that is expected
-Example: java cesar force MJQQT H
-Expected result: HELLO, DAHHK, AXEEH, KHOOR
+| Argument 1      | string to brute force      |
+| --------------- | -------------------------- |
+| Argument 2      | part that is expected      |
+| Example         | java cesar force MJQQT H   |
+| Expected result | HELLO, DAHHK, AXEEH, KHOOR |
 
 Will use brute force on a given string while looking for a given part of the expected clear text. Just like the Turing machine!
 
 ### tryout
 
-Arg1: string to try out
-Example: java cesar tryout MJQQT
-Expected result: MJQQT, LIPPS, KHOOR, JGNNQ, IFMMP, HELLO, GDKKN, FCJJM, EBIIL, DAHHK, CZGGJ, BYFFI, AXEEH, ZWDDG, YVCCF, XUBBE, WTAAD, VSZZC, URYYB, TQXXA, SPWWZ, ROVVY, QNUUX, PMTTW, OLSSV, NKRRU
+| Argument 1      | string to try out                                            |
+| --------------- | ------------------------------------------------------------ |
+| Example         | java cesar tryout MJQQT                                      |
+| Expected result | MJQQT, LIPPS, KHOOR, JGNNQ, IFMMP, HELLO, GDKKN, FCJJM, EBIIL, DAHHK, CZGGJ, BYFFI, AXEEH, ZWDDG, YVCCF, XUBBE, WTAAD, VSZZC, URYYB, TQXXA, SPWWZ, ROVVY, QNUUX, PMTTW, OLSSV, NKRRU |
 
 Will give back every decryption with a key from 0 to 26. May be used for educational purposes (aka "Why is 26 possibilities a bit to few").
 
 ### analyse
 
-Arg1: string to analye
-Example: java cesar analyse SUPERCALIFRAGILISTICEXPIALIGETISCH
-Expected result: A:3 B:0 C:3 D:0 E:3 F:1 G:2 H:1 I:7 J:0 K:0 L:3 M:0 N:0 O:0 P:2 Q:0 R:2 S:3 T:2 U:1 V:0 W:0 X:1 Y:0 Z:0
+| Argument 1      | string to analye                                            |
+| --------------- | ------------------------------------------------------------ |
+| Example         | java cesar analyse SUPERCALIFRAGILISTICEXPIALIGETISCH                                      |
+| Expected result | A:3 B:0 C:3 D:0 E:3 F:1 G:2 H:1 I:7 J:0 K:0 L:3 M:0 N:0 O:0 P:2 Q:0 R:2 S:3 T:2 U:1 V:0 W:0 X:1 Y:0 Z:0 |
 
 Will give the frequency of each letter in the given string. May be used for further cryptographic experiments. **Mom look, I'm a cryptographer now!**
 
